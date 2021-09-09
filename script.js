@@ -34,14 +34,14 @@ function timeout(promise, ms) {
 
 //4) Необходимо написать функцию, которая идентична Promise.all.
 
-// let urls = [
-//   "https://api.github.com/users/iliakan",
-//   "https://api.github.com/users/remy",
-//   "https://api.github.com/users/jeresig",
-// ];
-// let requests = urls.map((url) => fetch(url));
+let urls = [
+  "https://api.github.com/users/iliakan",
+  "https://api.github.com/users/remy",
+  "https://api.github.com/users/jeresig",
+];
+let requests = urls.map((url) => fetch(url));
 
-// all(requests).then((result) => console.log(result));
+all(requests).then((result) => console.log(result));
 
 function all(arrayOfPromises) {
   if (arrayOfPromises.length === 0) return arrayOfPromises;
